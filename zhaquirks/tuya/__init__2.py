@@ -11,14 +11,26 @@ import zigpy.types as t
 from .. import Bus
 
 
-TUYA_CLUSTER_ID = 0xEF00
+TUYA_CLUSTER_ID = 0x0102
 TUYA_SET_DATA = 0x0000
 TUYA_GET_DATA = 0x0001
 TUYA_SET_DATA_RESPONSE = 0x0002
 
-SWITCH_EVENT = "switch_event"
-ATTR_ON_OFF = 0x0000
-TUYA_CMD_BASE = 0x0100
+MOVING_STATE_EVENT = "tuyaMovingState"
+ATTR_tuyaMovingState =  0xf000
+TUYA_CMD_BASE = 0x0a00
+
+tuyaCalibration_EVENT = "tuyaCalibration"
+ATTR_tuyaCalibration =  0xf001
+TUYA_CMD_BASE = 0x0200
+
+tuyaCalibration_EVENT = "tuyaCalibration"
+ATTR_tuyaCalibration =  0xf001
+TUYA_CMD_BASE = 0x0200
+
+tuyaMotorReversal_EVENT = "tuyaMotorReversal"
+ATTR_tuyaMotorReversal =  0xf002
+TUYA_CMD_BASE = 0x0200
 
 _LOGGER = logging.getLogger(__name__)
 
